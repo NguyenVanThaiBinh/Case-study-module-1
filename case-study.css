@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+}
+#isrun {
+  height: 0em;
+
+  padding: 0px;
+}
+
+.wapper {
+  
+  background: rgb(2, 1, 41);
+  background: radial-gradient(
+    circle,
+    rgba(2, 1, 41, 1) 0%,
+    rgba(184, 204, 219, 1) 11%,
+    rgba(120, 120, 120, 1) 42%,
+    rgba(21, 21, 98, 1) 97%
+  );
+}
+.introbutton {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  height: 50px;
+  width: 190px;
+  background-color: burlywood;
+  border-radius: 16px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.introbutton:hover {
+  background-color: rgb(236, 74, 114);
+  color: white;
+}
+
+#myTable {
+  width: 100%;
+  height: 10em;
+  margin: 0px auto;
+
+  animation: blink 10s infinite;
+  -webkit-animation: blink 10s infinite;
+}
+@keyframes blink {
+  0% {
+    background: rgb(122, 107, 122);
+  }
+  25% {
+    background: rgb(162, 130, 238);
+  }
+  50% {
+    background: rgb(186, 220, 223);
+  }
+  100% {
+    background: #006ba1;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    background: rgb(122, 107, 122);
+  }
+  25% {
+    background: rgb(162, 130, 238);
+  }
+  50% {
+    background: rgb(186, 220, 223);
+  }
+  100% {
+    background: #006ba1;
+  }
+}
+#body2 {
+  padding: 2em 7em;
+}
+#tableright {
+  margin-left: 15em;
+}
+
+.advertise {
+  margin: auto 15em;
+}
+
+#table {
+  width: 1000px;
+  text-align: center;
+}
+
+.table2 {
+  width: 1000px;
+  margin: auto 150px;
+}
+.end {
+  margin: auto 450px;
+}
+.infortext {
+  background-color: rgb(122, 122, 247);
+}
+#nutbacktotop {
+  transition-duration: 2s;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 2000;
+  
+}
+html {
+  scroll-behavior:smooth;
+ 
+  
+}
+
+.icon {
+  padding: 0em 5em;
+  margin: 50px auto;
+}
+#canvas {
+  
+  margin: 0px auto;
+  padding: 0px auto;
+  background-color: rgb(78, 74, 74);
+}
+#cat {
+  top: 25em;
+  left: 2.5em;
+  color: black;
+
+  position: absolute;
+}
+#dog {
+  top: 25em;
+  left: 6.8em;
+  color: black;
+
+  position: absolute;
+}
+#bird {
+  top: 25em;
+  left: 10.7em;
+  color: black;
+
+  position: absolute;
+}
+#tele {
+  top: 25em;
+  left: 15em;
+  color: black;
+
+  position: absolute;
+}
+#card {
+  top: 25em;
+  left: 18.7em;
+  color: black;
+
+  position: absolute;
+}
+#infoTable {
+  width: 75em;
+  text-align: center;
+  font-size: 18px;
+}
+.infor {
+  display: flex;
+  justify-content: center;
+}
+a {
+  color: rgb(171, 187, 133);
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio</title>
+    <link rel="stylesheet" href="case-study.css" />
+    <script
+      src="https://kit.fontawesome.com/edd7cc417d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <a id="nutbacktotop"><i class="fas fa-3x fa-chevron-circle-up"></i></a>
+
+    <div class="wapper">
+      <div id="header">
+        <table id="myTable" cellpadding="10" cellspacing="2">
+          <tr class="icon">
+            <td>
+              <a href="https://azuminofm.co.jp/">
+                <img
+                  style="margin-left: 3em"
+                  height="90px"
+                  src="Source/newlogo.png"
+                  alt="logo"
+                />
+              </a>
+            </td>
+            <td class="leftHeader">
+              <table id="tableright">
+                <tr>
+                  <td>
+                    <a class="icon" href="https://twitter.com/azuminofm"
+                      ><i class="fab fa-3x fa-twitter-square"></i
+                    ></a>
+                  </td>
+                  <td>
+                    <a class="icon" href="https://www.facebook.com/">
+                      <i class="fab fa-3x fa-facebook-square"></i
+                    ></a>
+                  </td>
+                  <td>
+                    <a
+                      class="icon"
+                      href="https://www.instagram.com/accounts/login/?next=/azuminofm761/"
+                    >
+                      <i class="fab fa-3x fa-instagram-square"></i
+                    ></a>
+                  </td>
+                  <td>
+                    <a
+                      class="icon"
+                      href="https://mail.google.com/mail/u/0/#inbox"
+                    >
+                      <i class="fas fa-3x fa-envelope-square"></i
+                    ></a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><br /><br /></td>
+                </tr>
+                <tr>
+                  <td>
+                    <button class="introbutton" id="buttonhome">
+                      Home pages
+                    </button>
+                  </td>
+                  <td>
+                    <input
+                      id="timetable"
+                      class="introbutton"
+                      type="button"
+                      onclick="location.href='https://azuminofm.co.jp/timetable/';"
+                      value="Time Table"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      class="introbutton"
+                      type="button"
+                      onclick="location.href='https://azuminofm.co.jp/introduction/';"
+                      value="Introduce"
+                    />
+                  </td>
+                  <td>
+                    <input
+                      class="introbutton"
+                      type="button"
+                      onclick="location.href='https://azuminofm.co.jp/msg_and_req/';"
+                      value="Contact with us"
+                    />
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div id="body1">
+        <img
+          class="mySlides"
+          src="Source/名称未設定-3.jpg"
+          style="max-width: 100%"
+        />
+        <img class="mySlides" src="Source/IMG_4587.JPG" style="width: 100%" />
+        <img class="mySlides" src="Source/IMG_3419.JPG" style="width: 100%" />
+        <img class="mySlides" src="Source/hakuba.jpg" style="width: 100%" />
+      </div>
+      <br />
+
+      <div id="body2">
+        <table>
+          <tr>
+            <td>
+              <a href="https://azuminofm.co.jp/timetable/"
+                ><img style="height: 182px;"  src="Source/time-table.png" alt="time"
+              /></a>
+            </td>
+            <td>
+              <button id="isrun" onclick="playSound('sound')"><img height="182px" src="Source/on-air.png" alt="on-air" /></button>
+              <!-- <button id="isrun" onclick="play()">
+                <img height="182px" src="Source/on-air.png" alt="on-air" />
+              </button> -->
+
+              <audio
+                id="sound"
+                src="Source/Boney M. - Sunny (ZDF Disco performance - 05.02.1977).mp3"
+              ></audio>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <br /><br />
+      <div class="advertise">
+        <img src="Source/quang cao dai.jpg" alt="" />
+      </div>
+      <br /><br />
+      <div class="infor">
+        <table id="infoTable" cellpadding="10" cellspacing="2" border="1"></table>
+      
+    </div>
+    <br /><br />
+    <div class="footer">
+      <a href="https://azuminofm.co.jp/outline/">
+        <i id="cat" class="fas fa-4x fa-cat"></i
+      ></a>
+      <a href="https://azuminofm.co.jp/sponsors/"
+        ><i id="dog" class="fas fa-4x fa-dog"></i
+      ></a>
+      <a href="https://azuminofm.co.jp/bousai-radio/"
+        ><i id="bird" class="fas fa-4x fa-crow"></i
+      ></a>
+      <a href="https://azuminofm.co.jp/bousai-radio/">
+        <i id="tele" class="fas fa-4x fa-phone-alt"></i
+      ></a>
+      <a href="https://azuminofm.co.jp/bousai-radio/">
+        <i id="card" class="fas fa-4x fa-address-card"></i
+      ></a>
+
+      <canvas
+        id="canvas"
+        width="1517"
+        height="250"
+        style="border: 1px solid #d3d3d3"
+      ></canvas>
+    </div>
+    
+
+    <script src="case-study.js"></script>
+  </body>
+</html>
