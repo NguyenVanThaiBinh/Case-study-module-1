@@ -49,12 +49,12 @@ function playSound(sound) {
     // if song1 is paused
     document.getElementById(
       "isrun"
-    ).innerHTML = `<img src="Source/is running.png" alt="is running">`;
+    ).innerHTML = `<img height="130px" src="Source/is running.png" alt="is running">`;
     song1.play();
   } else {
     document.getElementById(
       "isrun"
-    ).innerHTML = `<img src="Source/on-air.png" alt="is running">`;
+    ).innerHTML = `<img height="130px" src="Source/on-air.png" alt="is running">`;
     song1.pause();
   }
 }
