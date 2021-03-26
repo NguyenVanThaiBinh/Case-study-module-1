@@ -68,13 +68,14 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.setLineDash([4, 2]);
   ctx.lineDashOffset = -offset;
-  ctx.strokeRect(12, 10, 1493, 330);
+  ctx.strokeRect(12, 10, 1493, 310);
   ctx.font = "30px serif";
   ctx.fillText("Information", 130, 50);
   ctx.fillText("Contact with us", 380, 50);
   ctx.fillText("Feedback", 680, 50);
   ctx.fillText("Telephone", 930, 50);
   ctx.fillText("Privacy", 1180, 50);
+  ctx.fillText("Copyright ⓒ AZUMINO FM CO.,LTD. All Rights Reserved.",400, 310);
 }
 
 function march() {
@@ -195,7 +196,7 @@ let products = [p1, p2, p3, p4, p5];
 
 function showProduct() {
   let product = document.getElementById("product");
-  products.forEach(function (item, index) {
+  products.forEach(function (item) {
     product.innerHTML += `
                             <div class="card">
                                 <div class="card-heard">
