@@ -12,6 +12,7 @@
 
 .wapper {
   
+  
   background: rgb(2, 1, 41);
   background: radial-gradient(
     circle,
@@ -129,35 +130,35 @@ html {
   background-color: rgb(78, 74, 74);
 }
 #cat {
-  top: 25em;
+  top: 27.5em;
   left: 2.5em;
   color: black;
 
   position: absolute;
 }
 #dog {
-  top: 25em;
+  top: 27.5em;
   left: 6.8em;
   color: black;
 
   position: absolute;
 }
 #bird {
-  top: 25em;
+  top: 27.5em;
   left: 10.7em;
   color: black;
 
   position: absolute;
 }
 #tele {
-  top: 25em;
+  top: 27.5em;
   left: 15em;
   color: black;
 
   position: absolute;
 }
 #card {
-  top: 25em;
+  top: 27.5em;
   left: 18.7em;
   color: black;
 
@@ -174,4 +175,79 @@ html {
 }
 a {
   color: rgb(171, 187, 133);
+}
+.container {
+  max-width: 1300px;
+  margin: 0px auto;
+}
+
+.row {
+  width: 100%;
+  display: block;
+}
+
+.card {
+  width: 19%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 2px;
+  float: left;
+}
+
+.card-heard {
+  font-weight: 600;
+  background-color: gray;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+
+.card-body {
+  height: 150px;
+}
+.card-footer {
+  background-color: gray;
+  margin-top: 5px;
+  padding: 10px ;
+  text-align: center;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.buybutton {
+  height: 3em;
+  width: 8em;
+  border-radius: 4px;
+  padding: 4px;
+  cursor: pointer;
+  background-color: green;
+}
+
+
+  
+
+
+.buybutton:hover {
+  background-color: rgb(115, 250, 121);
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 45%;
+  }
+}
+.radio{
+  height: 9.5em;
+  margin-left: 3em;
+  transition: 1.5s;
+
+
+  
+}
+.radio:hover {
+  -ms-transform: scale(2.5); /* IE 9 */
+  -webkit-transform: scale(2.5); /* Safari 3-8 */
+  transform: scale(2.5); 
 }

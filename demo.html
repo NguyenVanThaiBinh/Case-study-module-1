@@ -6,55 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      #myBtn {
-        display: none; /* Hidden by default */
-        position: fixed; /* Fixed/sticky position */
-        bottom: 20px; /* Place the button at the bottom of the page */
-        right: 30px; /* Place the button 30px from the right */
-        z-index: 99; /* Make sure it does not overlap */
-        border: none; /* Remove borders */
-        outline: none; /* Remove outline */
-        background-color: red; /* Set a background color */
-        color: white; /* Text color */
-        cursor: pointer; /* Add a mouse pointer on hover */
-        padding: 15px; /* Some padding */
-        border-radius: 10px; /* Rounded corners */
-        font-size: 18px; /* Increase font size */
+      *,
+      *::after,
+      *::before {
+        padding: 0px;
+        margin: 0px;
+        font-family: "Courier New", Courier, monospace;
+        /* font-size: 62.5%;  */
       }
 
-      #myBtn:hover {
-        background-color: #555; /* Add a dark-grey background on hover */
+      .container {
+        max-width: 900px;
+        margin: 0px auto;
       }
-      
+
+      .row {
+        width: 100%;
+        display: block;
+      }
+
+      .card {
+        width: 23%;
+        border: 1px solid gray;
+        border-radius: 5px;
+        margin: 3px;
+        float: left;
+      }
+
+      .card-heard {
+        font-weight: 600;
+        background-color: gray;
+        margin-bottom: 2px;
+        padding: 5px;
+      }
+
+      .card-body {
+        height: 150px;
+      }
+      .card-footer {
+        background-color: gray;
+        margin-top: 2px;
+        padding: 5px;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .btn {
+        border-radius: 4px;
+        padding: 4px;
+        cursor: pointer;
+      }
+
+      .btn-success {
+        background-color: green;
+      }
+
+      .btn-success:hover {
+        background-color: darkgreen;
+      }
+
+      @media (max-width: 600px) {
+        .card {
+          width: 45%;
+        }
+      }
     </style>
   </head>
   <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <div class="container">
+      <div class="row" id="product"></div>
+    </div>
     <script>
-      //Get the button:
-      mybutton = document.getElementById("myBtn");
-
-      // When the user scrolls down 20px from the top of the document, show the button
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
+      class Product {
+        constructor(name, desc, price) {
+          this.id = increment++;
+          this.name = name;
+          this.description = desc;
+          this.price = price;
         }
       }
 
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      let increment = 1;
+
+      let p1 = new Product("Bia Huda", "Hãy uống đi anh", 10000);
+      let p2 = new Product("Bia Huda", "Hãy uống đi anh", 10000);
+      let p3 = new Product("Bia Huda", "Hãy uống đi anh", 10000);
+      let p4 = new Product("Bia Huda", "Hãy uống đi anh", 10000);
+      let p5 = new Product("Bia Huda", "Hãy uống đi anh", 10000);
+
+      let products = [p1, p2, p3, p4, p5];
+
+      function showProduct() {
+       
+        let product = document.getElementById("product");
+        products.forEach(function (item, index) {
+          product.innerHTML += `
+                            <div class="card">
+                                <div class="card-heard">
+                                    <h3>${item.name}</h3>
+                                </div>
+                                <div class="card-body">
+                                    <p>${item.description}</p>
+                                </div>
+                                <div class="card-footer">
+                                    <h3>${item.price.toLocaleString("vi", {
+                                      style: "currency",
+                                      currency: "VND",
+                                    })}<h3>
+                                    <a class='btn btn-success'>order now</a>
+                                </div>
+                            </div>
+                        `;
+        });
       }
+
+      function ready() {
+        showProduct();
+      }
+
+      ready();
     </script>
   </body>
 </html>
