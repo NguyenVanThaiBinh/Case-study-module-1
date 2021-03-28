@@ -68,6 +68,7 @@ iframe{
         transition: all 1s ease-in-out;
       }
       .container2 .button2 {
+        
         margin: auto 1.5em;
         width: 120px;
         height: 70px;
@@ -80,6 +81,7 @@ iframe{
         border-image: linear-gradient(#d8c5e2, #df1adf) 30;
       }
       .container2 .button2 span {
+        
         text-align: center;
         font-family: "Sacramento", cursive;
         left: 56px;
