@@ -22,6 +22,76 @@ input[type="text"] {
 input[type="text"]:focus {
   width: 140%;
 }
+.listenradio{
+  float: left;
+  margin-left: 46em;
+}
+iframe{
+  height: 500px;
+  width: 700px;
+  margin-left: 25em;
+ 
+  
+}
+/* beautiful button */
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+
+      .container2,
+      .button2,
+      .sun,
+      .button span {
+        position: absolute;
+      }
+      body .container2 {
+       margin: auto 42em;
+        width: 200px;
+        height: 200px;
+      }
+      .container2 .a:hover .sun {
+        bottom: 176px;
+        transition: all 1s ease-in-out;
+        box-shadow: 0px 0px 10px #ffdc2a;
+      }
+      .container2 .a:hover .button2 {
+        box-shadow: 0px 0px 36px #958a96;
+        transition: all 1s ease-in-out;
+      }
+      .container2 .sun {
+        width: 64px;
+        height: 64px;
+        left: 55px;
+        bottom: 136px;
+        background: linear-gradient(180deg, #ffdc2a 0%, #fb2182 41.54%);
+        box-shadow: 0px 0px 36px #ffdc2a;
+        z-index: 2;
+        border-radius: 65px;
+        transition: all 1s ease-in-out;
+      }
+      .container2 .button2 {
+        margin: auto 1.5em;
+        width: 120px;
+        height: 70px;
+        background: #88749a;
+        box-shadow: 0px 0px 16px #d5d0d5;
+        border-radius: 100px;
+        z-index: 3;
+        
+        transition: all 1s ease-in-out;
+        border-image: linear-gradient(#d8c5e2, #df1adf) 30;
+      }
+      .container2 .button2 span {
+        text-align: center;
+        font-family: "Sacramento", cursive;
+        left: 56px;
+        font-size: 35px;
+        line-height: 70px;
+       
+        margin: 0 auto;
+        transition: all 0.3s ease-in-out;
+        background: -webkit-linear-gradient(#ffdc2a, #fb2182);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
 
 #isrun {
   float: left;
@@ -30,8 +100,13 @@ input[type="text"]:focus {
 
   padding: 0px;
 }
+#offbutton{
+  margin-left: 50em;
+  width: 15em;
+  height: 3em;
+}
 video{
- 
+  cursor: pointer;
   margin-right: 0em 0;
   padding-right: 0em;
   float: right;
@@ -73,7 +148,7 @@ video{
   margin: 0px auto;
 
   animation: blink 10s infinite;
-  -webkit-animation: blink 10s infinite;
+  -webkit-animation: blink 6s infinite;
 }
 @keyframes blink {
   0% {

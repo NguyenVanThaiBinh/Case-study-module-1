@@ -58,6 +58,16 @@ function playSound(sound) {
     song1.pause();
   }
 }
+//Make online radio
+function myFunction() {
+  document.getElementById("demo").innerHTML = `<iframe height="250px" width="550px" style="border:none;" src="https://tunein.com/radio/Azumino-FM-761-s189072/" >
+  </iframe><br><button  id="offbutton" onclick="myFunction1()">Click to off</button>`;
+  document.getElementById("nicebutton").style.display = "none";
+}
+function myFunction1() {
+  document.getElementById("demo").innerHTML = '';
+  document.getElementById("nicebutton").style.display = 'block';
+}
 
 // draw canvas
 
@@ -278,3 +288,5 @@ document.querySelector("#submit").addEventListener("focus", function (e) {
     },
   });
 });
+
+
