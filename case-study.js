@@ -44,17 +44,17 @@ document.getElementById("buttonhome").addEventListener("click", function () {
 //click to listen music
 function playSound(sound) {
   var song1 = document.getElementById(sound);
-  song1.volume = 0.25; // setting the volume
+  song1.volume = 0.5; // setting the volume
   if (song1.paused) {
     // if song1 is paused
     document.getElementById(
       "isrun"
-    ).innerHTML = `<img height="130px" src="Source/is running.png" alt="is running">`;
+    ).innerHTML = `<img height="100px" src="Source/is running.png" alt="is running">`;
     song1.play();
   } else {
     document.getElementById(
       "isrun"
-    ).innerHTML = `<img height="130px" src="Source/on-air.png" alt="is running">`;
+    ).innerHTML = `<img height="100px" src="Source/on-air.png" alt="is running">`;
     song1.pause();
   }
 }
@@ -75,7 +75,11 @@ function draw() {
   ctx.fillText("Feedback", 680, 50);
   ctx.fillText("Telephone", 930, 50);
   ctx.fillText("Privacy", 1180, 50);
-  ctx.fillText("Copyright ⓒ AZUMINO FM CO.,LTD. All Rights Reserved.",400, 310);
+  ctx.fillText(
+    "Copyright ⓒ AZUMINO FM CO.,LTD. All Rights Reserved.",
+    400,
+    310
+  );
 }
 
 function march() {
@@ -168,27 +172,27 @@ let increment = 1;
 
 let p1 = new Product(
   "PHILIPS FMRADI",
-  ` <img class="radio" src="Source/radio1.jpeg" alt="">`,
+  `  <img class="radio" src="Source/radio1-removebg-preview.png" alt="">`,
   99999
 );
 let p2 = new Product(
   "iBELL FM180U ",
-  ` <img class="radio" src="Source/radio2.jpeg" alt="">`,
+  `  <img class="radio" src="Source/radio2-removebg-preview.png" alt="">`,
   12000
 );
 let p3 = new Product(
   "Panasonic RF-P50",
-  ` <img class="radio" src="Source/radio3.jpeg" alt="">`,
+  `  <img class="radio" src="Source/radio3-removebg-preview.png" alt="">`,
   16999
 );
 let p4 = new Product(
   "SONY ICF-306",
-  ` <img class="radio" src="Source/radio4.jpeg" alt="">`,
+  `  <img class="radio" src="Source/radio4-removebg-preview.png" alt="">`,
   15999
 );
 let p5 = new Product(
   "TOSHIBA TX-PR",
-  ` <img class="radio" src="Source/radio5.jpeg" alt="">`,
+  `  <img class="radio" src="Source/radio5-removebg-preview.png" alt="">`,
   8888
 );
 
@@ -223,3 +227,54 @@ function ready() {
 }
 
 ready();
+
+//Form sign in
+var current = null;
+document.querySelector("#email").addEventListener("focus", function (e) {
+  if (current) current.pause();
+  current = anime({
+    targets: "path",
+    strokeDashoffset: {
+      value: 0,
+      duration: 700,
+      easing: "easeOutQuart",
+    },
+    strokeDasharray: {
+      value: "240 1386",
+      duration: 700,
+      easing: "easeOutQuart",
+    },
+  });
+});
+document.querySelector("#password").addEventListener("focus", function (e) {
+  if (current) current.pause();
+  current = anime({
+    targets: "path",
+    strokeDashoffset: {
+      value: -336,
+      duration: 700,
+      easing: "easeOutQuart",
+    },
+    strokeDasharray: {
+      value: "240 1386",
+      duration: 700,
+      easing: "easeOutQuart",
+    },
+  });
+});
+document.querySelector("#submit").addEventListener("focus", function (e) {
+  if (current) current.pause();
+  current = anime({
+    targets: "path",
+    strokeDashoffset: {
+      value: -730,
+      duration: 700,
+      easing: "easeOutQuart",
+    },
+    strokeDasharray: {
+      value: "530 1386",
+      duration: 700,
+      easing: "easeOutQuart",
+    },
+  });
+});
